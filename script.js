@@ -6,7 +6,8 @@ Crea una funzione getPostTitle(id) che accetta un id e restituisce una Promise c
 function getPostTitle(id) {
     return fetch(`https://dummyjson.com/posts/${id}`)
         .then(response => response.json())
-        .then(post => post.title);
+        .then(post => resolve(post.title))
+        .catch(reject)
 }
 
 getPostTitle(1)
