@@ -5,15 +5,15 @@ Crea una funzione getPostTitle(id) che accetta un id e restituisce una Promise c
 
 function getPostTitle(id) {
     return new Promise((resolve, reject) => {
-        fetch(`https://dummyjson.com/posts/{id}`)
-            .then(response => res.json())
+        fetch(`https://dummyjson.com/posts/${id}`)
+            .then(res => res.json())
             .then(post => resolve(post.title))
             .catch(reject)
     })
 }
 
 getPostTitle(1)
-    .then(title => consolel.log(title))
+    .then(risultato => console.log(risultato))
     .catch(errore => console.error(errore))
 
 
