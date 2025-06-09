@@ -34,7 +34,7 @@ function lanciaDado() {
 
 lanciaDado()
     .then(numero => console.log(numero))
-    .catch(error => console.log(error));
+    .catch(error => console.error(error));
 
 
 
